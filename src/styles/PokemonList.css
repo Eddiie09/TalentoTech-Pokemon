@@ -1,10 +1,77 @@
-.pokemon-list{
+/* Estilo para la lista de Pokémon */
+.pokemon-list {
     list-style-type: none;
-    padding: 4px;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+    background: #222; /* Fondo oscuro para un estilo retro */
 }
-.pokemon-list-item{
-    background-color: #000000;
-    margin: 5px;
-    padding: 10px;
-    border-radius: 4px;
+
+/* Estilo para cada elemento de la lista de Pokémon */
+.pokemon-list-item {
+    background-color: #333;
+    color: #fff;
+    margin: 10px;
+    padding: 15px;
+    border-radius: 8px;
+    border: 2px solid #00ff00; /* Borde verde neón */
+    box-shadow: 0 0 10px rgba(0, 255, 0, 0.5); /* Sombra verde neón */
+    width: calc(33.333% - 20px); /* Tres columnas con espacio entre ellas */
+    box-sizing: border-box;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    font-family: 'Press Start 2P', cursive; /* Fuente de estilo retro */
+}
+
+.pokemon-list-item:hover {
+    background-color: #444;
+    transform: scale(1.05);
+}
+
+/* Estilo para las tarjetas de Pokémon */
+.pokemon-card {
+    background-color: #1a1a1a;
+    color: #fff;
+    margin: 10px;
+    padding: 20px;
+    border-radius: 10px;
+    border: 2px solid #00ff00; /* Borde verde neón */
+    box-shadow: 0 0 15px rgba(0, 255, 0, 0.7); /* Sombra verde neón */
+    text-align: center;
+    width: 300px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    font-family: 'Press Start 2P', cursive; /* Fuente de estilo retro */
+}
+
+.pokemon-card img {
+    width: 120px;
+    height: 120px;
+    object-fit: contain;
+    margin-bottom: 10px;
+}
+
+.pokemon-card button {
+    background-color: #00ff00; /* Botón verde neón */
+    color: #000;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    font-family: 'Press Start 2P', cursive;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.pokemon-card button:hover {
+    background-color: #00cc00;
+    transform: scale(1.05);
+}
+
+.pokemon-card h1 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+.pokemon-card p {
+    margin: 5px 0;
 }

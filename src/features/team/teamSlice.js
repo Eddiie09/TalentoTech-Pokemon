@@ -1,5 +1,6 @@
 import { createSlice } from "@reduxjs/toolkit"
 
+
 const teamSlice  = createSlice({
     name:"team",
     initialState : {
@@ -12,7 +13,9 @@ const teamSlice  = createSlice({
         },
         removeFromTeam : (state, action) =>{
             state.value = state.value.filter(pokemon => pokemon !== action.payload)
+            
         }
+        
     }
 })
 
