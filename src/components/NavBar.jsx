@@ -8,7 +8,7 @@ const NavBar = ({ links }) => {
             <ul>
                 {links.map((link, index) => (
                     <li key={index}>
-                        <Link to={link.href}>{link.label}</Link> 
+                        <Link to={link.path}>{link.label}</Link> 
                     </li>
                 ))}
             </ul>

@@ -7,22 +7,24 @@ import PokemonList from './components/PokemonList';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import PokemonDetailPage from './pages/PokemonDetailPage';
 import PokemonListPage from './pages/PokemonListPage';
+import TeamPage from './pages/TeamPages';
 
 
 function App() {
-  const [count, setCount] = useState(0);
+
 
   return (
     <>
-    <Router>
-      <NavBar links={[{label:"Lista",path:"/"}]}/>
-      <Routes>
-        <Route path='/' element ={<PokemonListPage/>}/>
-        <Route path='/pokemon/:name' element ={<PokemonDetailPage/>}/>
-      </Routes>
+      <Router>
+        <NavBar links={[{ label: "Lista", path: "/" }, { label: "Equipo", path: "/Team" }]} />
+        <Routes>
+          <Route path='/' element={<PokemonListPage />} />
+          <Route path='/pokemon/:name' element={<PokemonDetailPage />} />
+          <Route path='/Team' element={<TeamPage />} />
+        </Routes>
       </Router>
-      
-      </>
+
+    </>
   )
 }
 
